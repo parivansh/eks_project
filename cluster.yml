@@ -1,0 +1,14 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: pdscluster
+  region: ap-south-1
+
+nodeGroups:
+   - name: nodegroup1
+     desiredCapacity: 2
+     instanceType: t2.micro
+     ssh:
+        publicKeyName: mykey1
+   
